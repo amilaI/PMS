@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/icon.png">
+
+    <title>Patient Management System</title>
+
+    <!-- Bootstrap core CSS -->
+  <!--   <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet"> -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap-mc.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .metro .image-button {
+          padding: 4px 12px;
+          text-align: center;
+          vertical-align: middle !important;
+          background-color: #d9d9d9;
+          border: 1px transparent solid;
+          color: #222222;
+          border-radius: 0;
+          cursor: pointer;
+          display: inline-block;
+          outline: none;
+          font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          line-height: 16px;
+          margin: auto;
+          position: relative;
+          border: 0;
+          padding-right: 45px;
+        }
+        .primary {
+          background-color: #16499A !important;
+          color: #FFF !important;
+          font-size:20px;
+          border: 1px solid #00F;
+          padding: 5px;
+          margin: 5px;
+        }
+        .small{
+          background-color: #16499A !important;
+          color: #FFF !important;
+          font-size:12px;
+          border: 1px solid #00F;
+          padding: 10px;
+          margin-top: 3px;
+        }
+        .metro:active{
+           background-color: black !important;
+        }
+        .tdhead{
+          font-size: 16px;
+        }
+        .tdBody{
+          font-size:16px;
+          font-weight:bold
+        }
+        .control-label{
+          text-align: left !important;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div  class="row" style="background-color: black;color: white;">
+        
+        <div class="col-lg-8">
+        <h3 style="padding-left:20px">Patient Managment System</h3>
+        </div>
+        <div class="col-lg-4">
+        <button class="metro image-button primary  pull-right" data-toggle="modal" data-target="#createModal">Create</button>
+        </div>
+    </div>
+
+    <div class="container">
+     
+
+  <div  class="row">
+    <div class="col-lg-12">
+    <h1 style="font-weight:bold">Daniel Richardson</h1>
+    </div>    
+    </div>
+      <!-- <div class="jumbotron">
+        <h1 style="font-family:weblysleekuil-bold">Jumbotron heading</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, 
+egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor 
+mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div> -->
+
+      <div class="row" style="border: 2px solid rgba(245, 245, 245, 1);border-radius: 10px;">
+
+          <div class="col-lg-6">
+                
+                <div class="row">
+                       <div  align="center" style="padding:10px">
+                          <img src="images/patient.png" class="img-responsive">
+                          <button class="metro image-button small" data-toggle="modal" data-target="#editModal">Edit Patient</button>
+                        </div>
+
+                </div>
+                 
+                 <div class="row">
+                 <div class="col-lg-1"></div>
+                      <div class="col-lg-10">
+                          
+                          <table class="table">                              
+                              <tbody>
+                                <tr>
+                                  <td  class="tdhead">Full Name</td>
+                                  <td  class="tdBody">Daniel Richardson</td>                                 
+                                </tr>
+                                 <tr>
+                                  <td  class="tdhead">Patient Id</td>
+                                  <td  class="tdBody">21398</td>                                 
+                                </tr>
+                                <tr>
+                                  <td class="tdhead">First Name</td>
+                                  <td class="tdBody">Daniel</td>                                 
+                                </tr>
+                                <tr>
+                                  <td  class="tdhead">Last Name</td>
+                                  <td class="tdBody">Richardson</td>                                  
+                                </tr>
+                                <tr>
+                                  <td class="tdhead">Age</td>
+                                  <td class="tdBody">22 yrs</td>                                  
+                                </tr>
+                                <tr>
+                                  <td class="tdhead">Address</td>
+                                  <td class="tdBody">"Citizen Homes ", Gregor place ,5th Lane,Colombo 7</td>                                  
+                                </tr>
+                                <tr>
+                                  <td  class="tdhead">City</td>
+                                  <td  class="tdBody">Colombo</td>                                  
+                                </tr>
+                                <tr>
+                                  <td  class="tdhead">NIC</td>
+                                  <td class="tdBody">921123129V</td>                                  
+                                </tr>
+                                <tr>
+                                  <td class="tdhead">Contact No</td>
+                                  <td class="tdBody">0713222222</td>                                  
+                                </tr>
+                                <tr>
+                                  <td class="tdhead">Email</td>
+                                  <td  class="tdBody">daniel@gmail.com</td>                                  
+                                </tr>
+                              </tbody>
+                            </table>
+
+                      </div>
+                  <div class="col-lg-1"></div>
+                  
+                </div>
+
+          </div>
+
+          <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-2">
+
+                    </div>
+                    <div class="col-lg-8">
+                    <!-- <button class="metro image-button primary" data-toggle="modal" data-target="#createModal">Create</button> -->
+                    </div>
+               
+                     <div class="col-lg-2">                        
+                     </div>
+                     <!--  
+ -->
+
+                </div>
+                <div class="row">
+                     <div class="col-lg-12">
+                              <h2>Medical History</h2>
+                               <div class="list-group">
+                                <a href="#" class="list-group-item"  data-toggle="modal" data-target="#viewhistoryModal">
+                                  <h4 class="list-group-item-heading">Date : 2014 Jun 2</h4>
+                                  <p class="list-group-item-text">Prescription : Summary of prescription goes here</p>
+                                  <p class="list-group-item-text">Notes : comments or special notes</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                  <h4 class="list-group-item-heading">List group item heading</h4>
+                                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                  <h4 class="list-group-item-heading">List group item heading</h4>
+                                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                  <h4 class="list-group-item-heading">List group item heading</h4>
+                                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                  <h4 class="list-group-item-heading">List group item heading</h4>
+                                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                              </div>
+                    </div>
+                </div>
+
+
+          </div>
+
+      </div>
+
+	
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+
+
+<!-- Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"   style="background-color: black;color: white;">
+        <button type="button" class="close" data-dismiss="modal"style="color:white" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Medical Report : <span style="font-weight:bold">2014 Jun 2</span></h4>
+      </div>
+      <div class="modal-body" style="background-color: rgba(230, 248, 173, 1);">
+
+        <form class="form-horizontal" role="form">
+           <div class="form-group">
+            <label for="medicine" class="col-sm-4 control-label">Patient Age</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="medicine" placeholder="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ailment" class="col-sm-4 control-label">Ailment/Problem</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ailment" placeholder="" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="medicine" class="col-sm-4 control-label">Recommanded Medicine/Treatment</label>
+            <div class="col-sm-8">
+
+            <textarea rows="4" cols="40" class="form-control" id="exampleInputEmail1" placeholder="Enter notes">The Mona Lisa is a half-length portrait of a woman by the Italian artist Leonardo da Vinci, which has been acclaimed as "the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world.</textarea>
+            </div>
+          </div>
+           <div class="form-group">
+            <label for="ailment" class="col-sm-4 control-label">Concentration</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ailment" placeholder="" required/>
+            </div>
+          </div>
+           <div class="form-group">
+            <label for="ailment" class="col-sm-4 control-label">Type of preparation</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ailment" placeholder="" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="testReport" class="col-sm-4 control-label">Instructions</label>
+            <div class="col-sm-8">
+
+            <textarea rows="4" cols="40" class="form-control" id="testReport" placeholder="">The Mona Lisa is a half-length portrait of a woman by the Italian artist Leonardo da Vinci, which has been acclaimed as "the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world.</textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="testReport" class="col-sm-4 control-label">Special Notes</label>
+            <div class="col-sm-8">
+
+            <textarea rows="4" cols="40" class="form-control" id="testReport" placeholder="">The Mona Lisa is a half-length portrait of a woman by the Italian artist Leonardo da Vinci, which has been acclaimed as "the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world.</textarea>
+            </div>
+          </div>
+
+       <!--    <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Save Prescription</button>
+            </div>
+          </div> -->
+        </form>
+      </div>
+      <div class="modal-footer"  style="background-color: black;color: white;margin-top: -1px;">
+        <!-- <button class="metro image-button primary" data-toggle="modal" data-target="#createModal">Save</button> -->
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="viewhistoryModal" tabindex="-1" role="dialog" aria-labelledby="viewhistoryModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"  style="background-color: black;color: white;">
+        <button type="button" class="close"  style="color:white" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Medical Report : <span style="font-weight:bold">2014 Jun 2</span></h4>
+      </div>
+      <div class="modal-body" style="background-color: rgba(212, 215, 237, 1);">
+
+        <form class="form-horizontal" role="form">
+         <div class="form-group">
+            <label for="medicine" class="col-sm-4 control-label">Patient Condition</label>
+            <div class="col-sm-8">
+              <h5><i class="glyphicon glyphicon-star"  style="color:red"></i>  &nbsp; &nbsp;Critical</h5>
+            </div>
+          </div>
+           <div class="form-group">
+            <label for="medicine" class="col-sm-4 control-label">Patient Age</label>
+            <div class="col-sm-8">
+              <h5>22 yrs</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ailment" class="col-sm-4 control-label">Ailment/Problem</label>
+            <div class="col-sm-8">
+              <h4 style="font-weight:bold">Fever and Headache</h4>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="medicine" class="col-sm-4 control-label">Recommanded Medicine/Treatment</label>
+            <div class="col-sm-8">
+
+           <h4  style="font-weight:bold">Paracetamols and Asprin.</h4>
+            </div>
+          </div>
+           <div class="form-group">
+            <label for="ailment" class="col-sm-4 control-label">Concentration</label>
+            <div class="col-sm-8">
+               <h5>2</h5>
+            </div>
+          </div>
+           <div class="form-group">
+            <label for="ailment" class="col-sm-4 control-label">Type of preparation</label>
+            <div class="col-sm-8">
+               <h5>Type of preparation should go here</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="testReport" class="col-sm-4 control-label">Instructions</label>
+            <div class="col-sm-8">
+
+            <h5>Call your healthcare provider if you think your medicine is not helping or if you have side effects. Tell him if you are allergic to any medicine. Keep a list of the medicines, vitamins, and herbs you take. Include the amounts, and when and why you take them. Bring the list or the pill bottles to follow-up visits. Carry your medicine list with you in case of an emergency.</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="testReport" class="col-sm-4 control-label">Special Notes</label>
+            <div class="col-sm-8">
+
+            <h5>Special Notes should go here</h5>
+            </div>
+          </div>
+
+       <!--    <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Save Prescription</button>
+            </div>
+          </div> -->
+        </form>
+      </div>
+      <div class="modal-footer"  style="background-color: black;color: white;margin-top: -1px;">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h2 class="modal-title" id="myModalLabel">Edit Patient</h2>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save Changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+</html>

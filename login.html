@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		
+		 <title>PMS | Login</title>
+	<link rel="shortcut icon" href="images/logo1.png">
+      <!-- Bootstrap core CSS -->
+    <link href="new_files/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="new_files/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#example').dataTable();
+			} );
+		</script>
+		<style type="text/css">
+			#formDiv{
+				margin: 40px;
+				padding: 40px;
+				color: white;
+				background-color: rgba(0, 0, 0, 0.6);
+				border-radius: 20px;
+			}
+			body{
+				background-color :rgba(55, 78, 101, 0.9);
+			}
+			#footer {
+			  position: absolute;
+			  bottom: 0;
+			  width: 100%;
+			  /* Set the fixed height of the footer here */
+			  height: 40px;
+			  background-color: #101010;
+			}
+			 input[type="text"]{
+			 	height: 29px;
+			 }
+			 .navbar-inverse .nav > li > a {
+    			color: #999;
+    		} 
+		</style>
+		<script type="text/javascript">
+   	$(window).on("load resize", function() { 
+   	      
+   	       var footerHeight = 0,
+   	           footerTop = 0,
+   	           $footer = $("#footer");
+   	           
+   	       positionFooter();
+   	       
+   	       function positionFooter() {
+   	       
+   	                footerHeight = $footer.height();
+   	            	bodyheight = $('body').height();
+   	                  	       			
+   	               if ( (bodyheight+footerHeight) < $(window).height()) {
+   	                   $footer.css({
+   	                        position: "absolute"
+   	                   })
+   	               } else {
+   	                   $footer.css({
+   	                        position: "inline"
+   	                   })
+   	               }
+   	               
+   	       }
+
+   	       $(window)
+   	               .scroll(positionFooter)
+   	               .resize(positionFooter)
+   	               
+   	});
+   	
+   	</script>
+	</head>
+	<body>
+	    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#"  style="font-weight: bold;color:#999">Patient Managment System</a>
+        </div>
+        <div style="height: 1px;" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav pull-right">            
+            <li style="font-weight:bold;color:#999 !important"><a href="#about">About</a></li>           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+		<div class="container">
+
+	<div  class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+					<div style="margin-top: 40px;">
+						<!-- <img src="http://blogs.dallasobserver.com/unfairpark/Caduceus.svg.png" class="img-responsive"> -->
+					</div>
+
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6">
+			<div id="formDiv">
+				<h4>Log in</h4>
+				<hr>
+				<form class="form-horizontal" role="form" action="home.html"  method="GET">
+				  <div class="form-group">
+				    <label for="inputUserName" class="col-sm-4 control-label">User Name</label>
+				    <div class="col-sm-8">
+				      <input type="text" class="form-control" id="inputUserName" name="inputUserName" placeholder="User Name" required>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputPassword3" class="col-sm-4 control-label">Password</label>
+				    <div class="col-sm-8">
+				      <input type="password" class="form-control" id="inputPassword3"  name="inputPassword" placeholder="Password" required>
+				    </div>
+				  </div>
+				  
+				  <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				    	<div align="center">
+				      <button type="submit" class="btn btn-default"><span  class="glyphicon glyphicon-user"></span>&nbsp; Sign in</button>
+				      </div>
+				    </div>
+				  </div>
+				 <!--  <hr>
+				  <div align="center">
+				  	<img class="img-responsive" src="http://www.clker.com/cliparts/o/o/6/Z/S/f/health-care-md.png" style="width:50%">
+				  </div> -->
+				 
+				</form>
+
+			</div>
+	</div>
+	<div class="col-lg-3 col-md-3  col-sm-3">
+					
+
+	</div>
+			</div>
+		</div>
+		 <div id="footer">
+	      <div class="container">
+	            <p class="text-muted" style="padding:5px">Patient Managment System  Copyright ©2014</p>
+	      </div>
+	    </div>
+    
+<!--Javascripts on body load-->
+ <script type="text/javascript">
+       $(document).ready(function() {
+         
+         
+          //$('#example_filter').css("background-color","red");    
+		
+         /* $('#editBtn' ).click(function() {
+            $(".tdBody").html(" ");
+            $( ".tdBody" ).append( "<input type=\"text\"/>" );
+            $('#editBtn').hide();
+            $('#bottomDetails').append(" <button class=\"metro image-button small\" id=\"saveBtn\">Save</button>  <button class=\"metro image-button small\" id=\"canclBtn\">Cancel</button>");
+    
+
+          });
+        $('#editIcon' ).click(function() {
+              alert("Edit funtionality still under construction!");
+          });       */      
+
+     });   
+    
+   </script>
+	</body>
+</html>
